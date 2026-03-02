@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Gallery</h1>
+        <div class="carousel-container">
+            <img class ="c1" src="nature11 (1).jpg" height = "400" width="400">
+            <img class ="c1" src="nature11 (2).jpg" height = "400px" width="400px">
+            <img class ="c1" src="nature11 (3).jpg" height = "400px" width="400px">
+            <img class ="c1" src="nature11 (4).jpg" height = "400px" width="400px">
+            <img class ="c1" src="nature 11 (5).jpg" height = "400px" width="400px">
+            <img class ="c1" src="nature11 (6).jpg" height = "400px" width="400px">
+        </div>
+    </center>
+    <script>
+        var ind = 0;
+        fun1()
+        function fun1(){
+            var i;
+            var x = document.getElementsByClassName("c1");
+            for(i=0;i<x.length;i++){
+                x[i].style.display = "none";
+            }
+            ind++;
+            if(ind > x.length){
+                ind = 1;
+            }
+            x[ind-1].style.display = "block";
+            setTimeout(fun1,2000);
+            
+        }
+    </script>
+</body>
+</html>
